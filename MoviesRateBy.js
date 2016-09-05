@@ -1,8 +1,10 @@
 (function() {
 var walk    = require('walk');
+var fileExtension = require('file-extension'); 
 //const readChunk = require('read-chunk'); 
 //const fileType = require('file-type');
 var files   = [];
+var actualMovies = [];
 
 // Walker options
 var walker  = walk.walk('H:\Movies 2', { followLinks: false });
@@ -15,13 +17,14 @@ walker.on('file', function(root, stat, next) {
 
 
 walker.on('end', function() {
-   // const buffer = readChunk.sync(files);
    for(var i=0;i<files.length;i++){
-       if(files[i].includes("mkv"))
+       var fExtension = fileExtension(files[i]);
+       if(fExtension == 'mkv' || fExtension == 'avi' || fExtension == 'mp4')
        {
-           files[i] = "mkv file found!"
+           files[i] = files[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ");
+           actualMovies.push(files[i]);
        }   
     }
-    console.log(files);
+    console.log(actualMovies);
 });
 })();
