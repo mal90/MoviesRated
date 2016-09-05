@@ -1,0 +1,24 @@
+{
+  "name": "moviesrated",
+  "version": "1.0.0",
+  "description": "Rate your movie list",
+  "main": "MoviesRateBy.js",
+  "dependencies": {
+    "file-type": "^3.8.0",
+    "walk": "^2.3.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mal90/MoviesRated.git"
+  },
+  "author": "Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mal90/MoviesRated/issues"
+  },
+  "homepage": "https://github.com/mal90/MoviesRated#readme"
+}
