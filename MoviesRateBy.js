@@ -1,4 +1,7 @@
+(function() {
 var walk    = require('walk');
+//const readChunk = require('read-chunk'); 
+//const fileType = require('file-type');
 var files   = [];
 
 // Walker options
@@ -10,6 +13,15 @@ walker.on('file', function(root, stat, next) {
     next();
 });
 
+
 walker.on('end', function() {
+   // const buffer = readChunk.sync(files);
+   for(var i=0;i<files.length;i++){
+       if(files[i].includes("mkv"))
+       {
+           files[i] = "mkv file found!"
+       }   
+    }
     console.log(files);
 });
+})();

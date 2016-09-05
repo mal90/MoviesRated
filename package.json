@@ -5,6 +5,7 @@
   "main": "MoviesRateBy.js",
   "dependencies": {
     "file-type": "^3.8.0",
+    "read-chunk": "^2.0.0",
     "walk": "^2.3.9"
   },
   "devDependencies": {},
